@@ -1,0 +1,26 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '\n🏗️👷 Styling your project before committing👷‍♂️🏗️';
+echo 'please be patient, this may take a while...\n';
+
+# Check Typescript Validation
+tsc --noEmit ||
+(
+    echo '\n🔨❌ You have a problem in your code. 🔨❌';
+    echo  'Check your typescript, add changes and try commit again.\n';
+    false;
+)
+
+
+# Check ESLint Standards
+yarn lint --fix ||
+(
+    echo '\n🔨❌ You have a problem in your code. Check linter 🔨❌';
+    echo  'Run yarn lint, add changes and try commit again.\n';
+    false;
+)
+
+echo '\n🎉 No error found: committing this now.... ✨🚀✨🚀\n';
+
+npx lint-staged

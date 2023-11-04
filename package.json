@@ -1,0 +1,60 @@
+{
+  "name": "website-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier:check": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "@motionone/utils": "^10.15.1",
+    "@types/node": "20.3.2",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "classnames": "^2.3.2",
+    "contentful": "^10.6.5",
+    "dayjs": "^1.11.10",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "framer-motion": "^10.12.17",
+    "lodash": "^4.17.21",
+    "next": "13.5.4",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-image-filter": "^0.1.2",
+    "react-lazy-load-image-component": "^1.6.0",
+    "sass": "^1.63.6",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.6"
+  },
+  "lint-staged": {
+    "src/**/*.+(ts|tsx)": [
+      "next lint -- fix",
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "*.js": "eslint --cache --fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/lodash": "^4.14.200",
+    "@types/react-lazy-load-image-component": "^1.5.3",
+    "@typescript-eslint/parser": "^6.9.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.3"
+  }
+}

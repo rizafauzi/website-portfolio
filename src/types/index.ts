@@ -63,6 +63,7 @@ export type Company = {
   secondColor: string;
   order: number;
   role: string;
+  accomplishments: string[];
 };
 
 export type Project = {
@@ -91,4 +92,11 @@ export type Skill = {
   image: RelationshipKey;
   imageUrl: string;
   type: "development" | "design" | "product";
+};
+
+export type Expertise = {
+  title: string;
+  description: string;
+  skills: RelationshipKey[];
+  techUsed: Skill[];
 };

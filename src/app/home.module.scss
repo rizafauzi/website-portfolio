@@ -1,3 +1,5 @@
+@import "/src/styles/globals.scss";
+
 .container {
   .grid {
     gap: 10px;
@@ -8,7 +10,6 @@
     @extend .grid;
     position: relative;
     margin-top: 10px;
-    margin-bottom: 10vh;
     grid-template-columns: repeat(3, 1fr);
 
     .grid1 {
@@ -24,11 +25,18 @@
 
   .entry {
     height: 100vh;
+    background: linear-gradient(180deg, #1e1d3c 85%, #17162a 100%);
   }
 
   .backgroundImg {
-    height: 100vh;
+    bottom: 10vh;
+    width: 100vw;
+    object-fit: cover;
     position: absolute;
+    height: 100vh !important;
+    @media (min-width: 1400px) {
+      bottom: 40vh;
+    }
   }
 
   .skillGrid {
@@ -74,4 +82,31 @@
       border-left: 4px dotted rgba(255, 255, 255, 0.444) !important;
     }
   }
+}
+
+.entryCard {
+  z-index: 100;
+  padding: 16px;
+  width: 70%;
+  margin: 0% 15%;
+  margin-top: 5vh;
+  min-height: 50vh;
+  position: relative;
+  border-radius: 16px;
+  background: #ffffff33;
+  backdrop-filter: blur(15px);
+  border: solid 1px hsla(0, 0%, 58.8%, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta {
+  @include cta;
+  display: flex;
+  margin-top: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
 }

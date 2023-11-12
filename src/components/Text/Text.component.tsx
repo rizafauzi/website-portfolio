@@ -4,14 +4,14 @@ import { Dancing_Script, Open_Sans } from "next/font/google";
 import { textColor, textSize, textWeight } from "./Text.style";
 import { IText } from "./Text.type";
 
-const yesevaOne = Dancing_Script({
+export const yesevaOne = Dancing_Script({
   variable: "--dancing-script",
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
 });
 
-const openSans = Open_Sans({
+export const openSans = Open_Sans({
   variable: "--open-sans",
   subsets: ["latin"],
   weight: ["400", "600", "700"],

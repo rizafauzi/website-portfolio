@@ -3,18 +3,19 @@ import { Suspense } from "react";
 import {
   EducationCard,
   ExperienceCard,
+  Memoji,
   ProfileCard,
   ProjectCard,
   SkillCard,
 } from "@/app/components";
 import ExperienceSection from "@/app/sections/experience.section";
-import { Image, Layout, RunningText, Text } from "@/components";
+import { Image, Layout, RunningText, Text, TypingText } from "@/components";
 import { education } from "@/constants/education";
 import { experiences } from "@/constants/experience";
 import { projects } from "@/constants/projects";
 import { skills } from "@/constants/skills";
 
-import { ProjectSection } from "./sections";
+import { ProjectSection, SkillSection } from "./sections";
 
 import styles from "./home.module.scss";
 
@@ -29,16 +30,26 @@ const HomePage = async () => {
           className={styles.backgroundImg}
           src={`/assets/images/background_home.jpg`}
         />
-        <div className={styles.card}>
-          <h1>Hi, I`m Riza Fauzi</h1>
-          <h2>Software Engineer • UI Designer • Fulltime Lerner</h2>
-          <h4>Resume</h4>
-          <h4>Portfolio</h4>
-        </div>
-        <RunningText color="#bbffb7">
-          Sampurasun! 안녕하세요! Hello! もしもし! Sampurasun! 안녕하세요! Hello! もしもし!
-          Sampurasun! 안녕하세요! Hello! もしもし!
+        <RunningText color="#bbffb7" className="mt-[5vh]">
+          Sampurasun! 안녕하세요! Hello! もしもし! Hi! Sampurasun! 안녕하세요! Hello! もしもし! Hi!
+          Sampurasun! 안녕하세요! Hello! もしもし! Hi!
         </RunningText>
+        <Layout>
+          <div className={styles.entryCard}>
+            <TypingText
+              weight="semibold"
+              size="d-small"
+              color="white"
+              sequence={["Hello!", 1000, "Hi!", 1000, "Hi! I'm Riza Fauzi", 10000]}
+            />
+            <Memoji />
+            <Text color="white" size="large" weight="semibold">
+              Software Engineer • UI Designer • Fulltime Lerner
+            </Text>
+            <Text color="white">Resume</Text>
+            <Text color="white">Portfolio</Text>
+          </div>
+        </Layout>
       </div>
       <RunningText color="#bbffb7">ABOUT</RunningText>
       <Layout>
@@ -51,8 +62,11 @@ const HomePage = async () => {
       {/* <Suspense fallback={<PromoSectionLoading />}>
         <PromoSection data={data} />
       </Suspense> */}
+      <Suspense>
+        <SkillSection />
+      </Suspense>
 
-      <Layout>
+      {/* <Layout>
         {skills.map(item => (
           <>
             <Text color="white" size="xxlarge">
@@ -66,12 +80,12 @@ const HomePage = async () => {
             </div>
           </>
         ))}
-      </Layout>
+      </Layout> */}
       <RunningText color="#b7bdff">WORK-EXPERIENCES</RunningText>
       <Suspense>
         <ExperienceSection />
       </Suspense>
-      <RunningText color="#fffeb7">EDUCATION</RunningText>
+      <RunningText color="#fffeb7">CONTACT</RunningText>
       <Layout>
         {education.map(item => (
           <EducationCard data={item} key={item.university} />

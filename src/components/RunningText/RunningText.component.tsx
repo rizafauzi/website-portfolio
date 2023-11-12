@@ -2,6 +2,7 @@
 
 import { memo, useRef } from "react";
 import { wrap } from "@motionone/utils";
+import classNames from "classnames";
 import {
   motion,
   useAnimationFrame,
@@ -77,12 +78,13 @@ function ParallaxText({ color, children, baseVelocity = 100, outlined = false }:
   );
 }
 
-const RunningText: React.FC<{ children: string; color?: string }> = ({
-  children = "Text",
+const RunningText: React.FC<{ children: string; color?: string; className?: string }> = ({
+  className,
   color = "white",
+  children = "Text",
 }) => {
   return (
-    <section className={styles.runningText}>
+    <section className={classNames(styles.runningText, className)}>
       <ParallaxText color={color} baseVelocity={-2}>
         {children}
       </ParallaxText>

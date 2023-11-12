@@ -25,18 +25,23 @@ const ExperienceCard = ({ data, isRight, className }: ExperienceCard) => {
     slug,
     firstColor,
     secondColor,
+    accomplishments,
   } = data;
 
   return (
     <div className={classNames(styles.container, className)}>
       <div className={styles.experienceCard}>
-        <Image width={60} height={60} alt={slug} src={image} className={styles.logo} />
-        <Text color="white" size="xxxlarge" weight="semibold">
-          {companyName}
-        </Text>
-        <Text color="white" className="opacity-70" size="large">
-          {role}
-        </Text>
+        <div className={styles.companyTitle}>
+          <Image width={60} height={60} alt={slug} src={image} className={styles.logo} />
+          <div className={styles.title}>
+            <Text color="white" size="xxxlarge" weight="semibold">
+              {companyName}
+            </Text>
+            <Text color="white" className="opacity-70" size="large">
+              {role}
+            </Text>
+          </div>
+        </div>
 
         <div className={styles.circle}>
           <Image
@@ -49,28 +54,30 @@ const ExperienceCard = ({ data, isRight, className }: ExperienceCard) => {
         </div>
 
         <div className={styles.hiddenHover}>
-          <div className={styles.year}>
-            <Text color="white">
-              {dayjs(startedAt).format("MMMM YYYY")} -{" "}
-              {endedAt ? dayjs(endedAt).format("MMMM YYYY") : "Present"}
-            </Text>
-          </div>
-
           <hr />
+          <ul className="list-disc ml-4">
+            {accomplishments?.map(item => (
+              <Text color="white" tag="li" key={item}>
+                {item}
+              </Text>
+            ))}
+          </ul>
+        </div>
 
-          <div className={styles.skills}>
-            <div className={styles.skill}>
-              <Text color="white">Next JS</Text>
-            </div>
-            <div className={styles.skill}>
-              <Text color="white">Next JS</Text>
-            </div>
-          </div>
+        <div className={styles.date}>
+          <Text color="white">{dayjs(startedAt).format("MMM YYYY")}</Text>
+          <Image
+            width={20}
+            height={20}
+            alt="arrow"
+            className="rotate-45"
+            src="/assets/icons/arrow.icon.svg"
+          />
+          <Text color="white">{endedAt ? dayjs(endedAt).format("MMM YYYY") : "Present"}</Text>
         </div>
       </div>
       <div
         style={{
-          // background: `linear-gradient(135deg, #4aa8a8 0%, #22762b 100%)`,
           background: `linear-gradient(135deg, ${firstColor} 0%, ${secondColor} 100%)`,
         }}
         className={isRight ? styles.rightBackdrop : styles.backdrop}

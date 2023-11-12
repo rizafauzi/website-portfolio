@@ -6,7 +6,7 @@ export async function apiRequest<T, R>(
   options: RequestInit = {
     method: "GET",
     next: {
-      revalidate: REVALIDATE,
+      revalidate: 0,
     },
   },
 ): Promise<ApiResponse<T, R> | undefined> {

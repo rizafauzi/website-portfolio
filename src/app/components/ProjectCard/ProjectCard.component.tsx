@@ -54,15 +54,13 @@ const ProjectCard = ({ data, minHeight = "40vh" }: ProjectCardProps) => {
           <div className={styles.techStack}>
             {techUsed.map(item => (
               <button className={styles.stack} key={item.slug}>
-                <div className={styles.imageStack}>
-                  <Image
-                    alt="copy"
-                    width={15}
-                    height={15}
-                    src={item.imageUrl}
-                    className={styles.logo}
-                  />
-                </div>
+                <Image
+                  alt="copy"
+                  width={20}
+                  height={20}
+                  src={item.imageUrl}
+                  className={styles.logo}
+                />
                 <Text weight="semibold" color="white">
                   {item.label}
                 </Text>

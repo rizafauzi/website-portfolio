@@ -5,28 +5,26 @@ import { education } from "@/constants/education";
 import { experiences } from "@/constants/experience";
 import { projects } from "@/constants/projects";
 import { skills } from "@/constants/skills";
-import { getCompanies } from "@/services/skills";
+import { getExpertise } from "@/services/skills";
 
 import { SkillCard } from "../components";
 
 import styles from "../home.module.scss";
 
 const SkillSection = async () => {
-  const data = await getCompanies();
+  const data = await getExpertise();
   return (
     <Layout>
-      {skills.map(item => (
-        <>
-          <Text color="white" size="xxlarge">
-            {item.title}
-          </Text>
-          <hr />
-          <div className={styles.skillGrid}>
-            {item.value.map(skill => (
-              <SkillCard key={skill.slug} data={skill} />
-            ))}
-          </div>
-        </>
+      {data?.map(item => (
+        <div key={item.title}>
+          <Text color="white">{item.title}</Text>
+          <Text color="white">{item.description}</Text>
+          {item.techUsed.map(dt => (
+            <Text color="white" key={dt.label}>
+              {dt.label}
+            </Text>
+          ))}
+        </div>
       ))}
     </Layout>
   );

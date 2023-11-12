@@ -25,7 +25,8 @@ export type TextTagType =
   | "p"
   | "label"
   | "th"
-  | "td";
+  | "td"
+  | "li";
 
 export type TextWeightType = "bold" | "semibold" | "normal";
 

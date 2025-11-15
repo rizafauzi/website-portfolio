@@ -35,7 +35,7 @@ module.exports = {
         "bg-disable": "var(--bg-disable)",
         "bg-overlay": "var(--bg-overlay)",
         "bg-sheet": "var(--bg-sheet)",
-        "neutral-50": "var(--neutral-50)",k
+        "neutral-50": "var(--neutral-50)",
         "neutral-100": "var(--neutral-100)",
         "neutral-200": "var(--neutral-200)",
         "neutral-300": "var(--neutral-300)",

@@ -1,5 +1,11 @@
+export { default as EducationCard } from "./EducationCard";
+export { default as ExperienceCard } from "./ExperienceCard";
 export { default as Image } from "./Image";
 export { default as Layout } from "./Layout";
+export { default as Memoji } from "./Memoji";
+export { default as ProfileCard } from "./ProfileCard";
 export { default as RunningText } from "./RunningText";
+export { default as SkillBubble } from "./SkillBubble";
+export { default as SkillCard } from "./SkillCard";
 export { default as Text } from "./Text";
 export { default as TypingText } from "./TypingText";

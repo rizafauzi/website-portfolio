@@ -1,4 +1,4 @@
-@import "../../../styles/globals.scss";
+@import "../../styles/globals.scss";
 
 .container {
   height: 180px;
@@ -121,7 +121,7 @@
   &:hover {
     .experienceCard {
       height: 290px;
-      width: 450px;
+      width: 475px;
       cursor: pointer;
 
       .companyTitle {

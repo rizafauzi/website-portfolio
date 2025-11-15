@@ -1,5 +1,5 @@
 import ExperienceSection from "./experience.section";
+import ExpertiseSection from "./expertise.section";
 import ProjectSection from "./project.section";
-import SkillSection from "./skill.section";
 
-export { ExperienceSection, ProjectSection, SkillSection };
+export { ExperienceSection, ExpertiseSection, ProjectSection };

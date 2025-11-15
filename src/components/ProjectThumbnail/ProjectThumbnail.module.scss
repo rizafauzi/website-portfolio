@@ -1,8 +1,11 @@
 .cta {
-  margin-top: 8px;
-  padding: 8px 18px;
+  margin-top: 6px;
+  padding: 6px 18px;
   border-radius: 8px;
   background: #ffffff33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: solid 1px hsla(0, 0%, 58.8%, 0.5);
 }
 
@@ -76,7 +79,7 @@
 
     .image1 {
       top: 5%;
-      right: -70%;
+      right: -30%;
       display: flex;
       position: absolute;
       align-items: center;
@@ -88,7 +91,7 @@
       position: absolute;
       transition: all 0.5s ease-in-out;
       top: 15%;
-      left: -60%;
+      left: -30%;
     }
   }
 
@@ -117,15 +120,17 @@
       transform: scale(1);
 
       .image1 {
-        top: 8%;
-        right: -60%;
+        top: 5%;
+        right: -12%;
+        transform: scale(0.75);
         // transition: all 0.5s ease-in-out;
         transition: all 0.5s cubic-bezier(0.62, 0.01, 0.33, 0.97);
       }
 
       .image2 {
         top: 20%;
-        left: -40%;
+        left: -15%;
+        transform: scale(0.75);
         // transition: all 0.5s ease-in-out;
         transition: all 0.5s cubic-bezier(0.62, 0.01, 0.33, 0.97);
       }

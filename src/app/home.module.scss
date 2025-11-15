@@ -101,6 +101,14 @@
   align-items: center;
 }
 
+.expertise {
+  gap: 12px;
+  display: grid;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .cta {
   @include cta;
   display: flex;

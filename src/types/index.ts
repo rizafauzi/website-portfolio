@@ -66,9 +66,16 @@ export type Company = {
   accomplishments: string[];
 };
 
+export type Configuration = {
+  name: string;
+  key: string;
+  value: object;
+};
+
 export type Project = {
   title: string;
   slug: string;
+  alias: string;
   description: string;
   summary: string;
   startedAt: string;
@@ -81,6 +88,10 @@ export type Project = {
   techStacks: RelationshipKey[];
   techUsed: Skill[];
   company: Company | undefined;
+  mobileThumbnail: RelationshipKey;
+  desktopThumbnail: RelationshipKey;
+  imgMobile: string;
+  imgDesktop: string;
 };
 
 export type Skill = {

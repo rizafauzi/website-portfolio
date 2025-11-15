@@ -35,6 +35,7 @@ export interface IText {
   color?: ColorType;
   children?: any;
   className?: any;
+  opacity?: number;
   size?: TextSizeType;
   weight?: TextWeightType;
   tag?: TextTagType;

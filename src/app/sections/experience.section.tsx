@@ -5,7 +5,7 @@ import { experiences } from "@/constants/experience";
 import { getCompanies } from "@/services/skills";
 import { Company } from "@/types";
 
-import { ExperienceCard } from "../components";
+import { ExperienceCard } from "../../components";
 
 import styles from "../home.module.scss";
 

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 
+import ExperienceSection from "@/app/sections/experience.section";
 import {
   EducationCard,
   ExperienceCard,
@@ -7,15 +8,11 @@ import {
   ProfileCard,
   ProjectCard,
   SkillCard,
-} from "@/app/components";
-import ExperienceSection from "@/app/sections/experience.section";
+} from "@/components";
 import { Image, Layout, RunningText, Text, TypingText } from "@/components";
 import { education } from "@/constants/education";
-import { experiences } from "@/constants/experience";
-import { projects } from "@/constants/projects";
-import { skills } from "@/constants/skills";
 
-import { ProjectSection, SkillSection } from "./sections";
+import { ExpertiseSection, ProjectSection } from "./sections";
 
 import styles from "./home.module.scss";
 
@@ -63,24 +60,8 @@ const HomePage = async () => {
         <PromoSection data={data} />
       </Suspense> */}
       <Suspense>
-        <SkillSection />
+        <ExpertiseSection />
       </Suspense>
-
-      {/* <Layout>
-        {skills.map(item => (
-          <>
-            <Text color="white" size="xxlarge">
-              {item.title}
-            </Text>
-            <hr />
-            <div className={styles.skillGrid}>
-              {item.value.map(skill => (
-                <SkillCard key={skill.slug} data={skill} />
-              ))}
-            </div>
-          </>
-        ))}
-      </Layout> */}
       <RunningText color="#b7bdff">WORK-EXPERIENCES</RunningText>
       <Suspense>
         <ExperienceSection />

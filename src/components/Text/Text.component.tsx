@@ -1,11 +1,11 @@
 import React from "react";
-import { Dancing_Script, Open_Sans } from "next/font/google";
+import { Bebas_Neue, Open_Sans } from "next/font/google";
 
 import { textColor, textSize, textWeight } from "./Text.style";
 import { IText } from "./Text.type";
 
-export const yesevaOne = Dancing_Script({
-  variable: "--dancing-script",
+export const bebasNeue = Bebas_Neue({
+  variable: "--bebas-neue",
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -24,18 +24,21 @@ const Text = ({
   className = "",
   size = "medium",
   weight = "normal",
-  color = "text-500",
+  color = "white",
+  opacity = 1,
   dangerouslySetInnerHTML,
   children,
 }: IText) => {
   const Tag = tag || "p";
   const heading = ["h1", "h2", "h3", "h4", "h5", "h6"].includes(tag || "");
 
+  console.info("Tag: ", Tag);
+  console.info("heading: ", heading);
   return (
     <Tag
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
-      style={heading ? yesevaOne.style : openSans.style}
-      className={`${heading ? yesevaOne.className : openSans.className} ${className} ${textWeight(
+      style={heading ? bebasNeue.style : bebasNeue.style}
+      className={`${heading ? bebasNeue.className : bebasNeue.className} ${className} ${textWeight(
         weight,
       )} ${textSize(size)} ${textSize(size, "lg")} ${textColor(color)} ${
         ellipsis ? "truncate" : ""

@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  min-height: 110px;
+  position: relative;
+  align-items: center;
+  .title {
+    position: absolute;
+  }
+  .back {
+    width: 80px;
+    height: 80px;
+    left: -110px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-radius: 40px;
+    justify-content: center;
+    background: #ffffff33;
+    border: solid 1px hsla(0, 0%, 58.8%, 0.5);
+
+  }
+}

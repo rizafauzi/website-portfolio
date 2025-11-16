@@ -1,0 +1,42 @@
+.container {
+  gap: 5px;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  position: relative;
+  background: pink;
+  align-items: center;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 1px #ffffff84;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to bottom right, transparent, #ffffff2b);
+
+  .projects {
+    left: 0px;
+    opacity: 0;
+    top: -210px;
+    width: 400px;
+    height: 200px;
+    padding: 16px;
+    display: none;
+    border-radius: 8px;
+    position: absolute;
+    backdrop-filter: blur(40px);
+    border: solid 1px #ffffff5f;
+    transition: all 0.25s 0.25s ease-in-out;
+    background: linear-gradient(to bottom right, transparent, #ffffff2b);
+  }
+
+  &:hover {
+    cursor: pointer;
+    // transform: scale(1.1);
+
+    .projects {
+      opacity: 1;
+      display: block;
+    }
+  }
+}

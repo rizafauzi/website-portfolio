@@ -1,0 +1,39 @@
+{
+  "name": "web-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@motionone/utils": "^10.18.0",
+    "autoprefixer": "^10.4.22",
+    "classnames": "^2.5.1",
+    "contentful": "^11.8.13",
+    "dayjs": "^1.11.19",
+    "framer-motion": "^12.23.24",
+    "lodash": "^4.17.21",
+    "next": "16.0.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-image-filter": "^0.1.2",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-type-animation": "^3.2.0",
+    "sass": "^1.94.0",
+    "tailwindcss": "^4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-lazy-load-image-component": "^1.6.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.3",
+    "typescript": "^5"
+  }
+}

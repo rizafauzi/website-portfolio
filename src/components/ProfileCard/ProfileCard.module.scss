@@ -1,0 +1,108 @@
+.container {
+  height: 100vh;
+
+  .wrapperCard {
+    width: 100%;
+    margin-bottom: 20vh;
+    // margin-left: 5%;
+    min-height: 60vh;
+    padding: 20px;
+    display: flex;
+    position: relative;
+
+    .profileCard {
+      top: 5vh;
+      left: 0%;
+      width: 100%;
+      min-height: 60vh;
+      padding: 20px;
+      display: flex;
+      position: absolute;
+      border-radius: 30px;
+      backdrop-filter: blur(40px);
+      background: rgba(0, 0, 0, 0.2);
+      border: solid 1px rgba(150, 150, 150, 0.5);
+      @media (max-width: 768px) {
+        padding: 15px;
+        border-radius: 20px;
+        flex-direction: column;
+      }
+      .profileContent {
+        width: 60%;
+        padding: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        .title {
+          width: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .emoji {
+          width: 120px;
+          height: 120px;
+          margin-bottom: 20px;
+          object-fit: contain;
+        }
+      }
+      .profileImage {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+          border-radius: 20px;
+        }
+        @media (max-width: 768px) {
+          width: 100%;
+          height: 30vh;
+          border-radius: 10px;
+        }
+      }
+    }
+    .backgroundCard {
+      top: 5vh;
+      left: 0%;
+      width: 92%;
+      min-height: 60vh;
+      position: absolute;
+      border-radius: 30px;
+      transform: skew(0, 5deg);
+      transform-origin: top left;
+      transition: all 0.4s cubic-bezier(0.62, 0.01, 0.33, 0.97);
+      background: linear-gradient(to bottom, #ff9ce9, #845fc0);
+      @media (max-width: 768px) {
+        width: 85%;
+        border-radius: 20px;
+        transform: skew(0, 10deg);
+      }
+    }
+  }
+
+  .wrapperCard:hover .backgroundCard {
+    width: 82%;
+    transform: skew(0, 10deg);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+    font-size: 32px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    text-align: left;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
+}

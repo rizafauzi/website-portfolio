@@ -1,8 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss' layer(utilities);
 
 /* @tailwind base;
 @tailwind components; */
-@tailwind utilities;
+@import 'tailwindcss/utilities' layer(utilities);
 
 :root {
   --primary-100: #e9f5f8;

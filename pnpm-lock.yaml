@@ -51,11 +51,11 @@ importers:
         specifier: ^1.94.0
         version: 1.94.0
       tailwindcss:
-        specifier: ^4
+        specifier: ^4.1.17
         version: 4.1.17
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: ^4.1.17
         version: 4.1.17
       '@types/lodash':
         specifier: ^4.17.20

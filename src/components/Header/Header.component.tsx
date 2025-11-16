@@ -26,7 +26,7 @@ const Header = ({title}: HeaderProps) => {
           width={50}
           height={50}
           alt="arrow"
-          className="rotate-[225deg]"
+          className="rotate-225"
           src="/assets/icons/arrow.icon.svg"
         />
       </button>

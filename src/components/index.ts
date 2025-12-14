@@ -10,3 +10,6 @@ export { default as SkillCard } from "./SkillCard";
 export { default as Text } from "./Text";
 export { default as TypingText } from "./TypingText";
 export { default as ProjectCard } from "./ProjectCard";
+export { default as AboutCard } from "./AboutCard";
+export { default as Header } from "./Header";
+export { default as Article } from "./Article";

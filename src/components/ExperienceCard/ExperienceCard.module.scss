@@ -1,4 +1,4 @@
-@import "../../styles/globals.scss";
+@use "/src/styles/globals.scss" as *;
 
 .container {
   height: 180px;

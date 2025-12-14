@@ -13,6 +13,10 @@ type ProjectThumbnailProps = {
 };
 
 const ProjectThumbnail = ({ data, minHeight = "40vh" }: ProjectThumbnailProps) => {
+  if (!data) {
+    return <div />;
+  }
+
   const {
     slug,
     title,
@@ -51,7 +55,7 @@ const ProjectThumbnail = ({ data, minHeight = "40vh" }: ProjectThumbnailProps) =
           {summary}
         </Text>
         <SkillBubble data={techUsed} className="pr-6" />
-        <Link href={`/project/${slug}`} className={styles.cta}>
+        <Link href={`/projects/${slug}`} className={styles.cta}>
           <Text weight="semibold" color="white">
             See Detail
           </Text>

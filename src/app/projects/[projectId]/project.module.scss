@@ -1,0 +1,52 @@
+@use "/src/styles/globals.scss" as *;
+
+.container {
+  gap: 16px;
+  display: grid;
+  position: re;
+  grid-template-columns: 35% 65%;
+
+  .imgWrapper {
+    top: 28px;
+    position: sticky;
+    height: fit-content;
+    .imgDesktop {
+      top: 0px;
+      left: 0px;
+      width: 120px;
+      height: 120px;
+      position: absolute;
+    }
+
+    .imgMobile {
+      top: 100px;
+      left: 120px;
+      width: 180px;
+      height: 180px;
+      position: absolute;
+    }
+  }
+
+  .description {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer {
+  hr {
+    border: solid 0.5px rgba(255, 255, 255, 0.25);
+  }
+
+  .wrapper {
+    display: flex;
+    margin: 24px 0px;
+    align-items: center;
+    justify-content: space-between;
+    .otherProject {
+      @include glass;
+      gap: 12px;
+    }
+  }
+}

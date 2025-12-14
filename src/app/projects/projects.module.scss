@@ -1,8 +1,12 @@
+.grid {
+  // gap: 16px;
+  // display: grid;
+  // column-count: 2;
+  // column-gap: 24px;
+  // column-width: 360px;
 
-.container {
-  gap: 16px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  column-gap: 18px;
+  column-width: 400px;
 }
 
 .header {

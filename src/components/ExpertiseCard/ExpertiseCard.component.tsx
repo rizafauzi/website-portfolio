@@ -27,11 +27,11 @@ const ExpertiseCard = ({ data, className }: IExpertiseCard) => {
           <Text color="white" opacity={0.5} className="mb-4">
             {description}
           </Text>
-          <Text color="white" weight="semibold" className="my-2">
+        </div>
+        <div className="relative h-20 mb-2">
+          <Text color="white" weight="semibold" className="ml-6 my-2">
             Tech used:
           </Text>
-        </div>
-        <div className="relative h-14">
           <SkillBubble data={techUsed} className="px-6" />
         </div>
       </div>

@@ -1,7 +1,10 @@
-@mixin cta {
+@mixin glass {
+  display: flex;
   margin-top: 8px;
   padding: 8px 18px;
   border-radius: 8px;
+  align-items: center;
+  justify-content: center;
   background: #ffffff33;
   border: solid 1px hsla(0, 0%, 58.8%, 0.5);
 

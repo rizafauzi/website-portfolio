@@ -3,33 +3,36 @@ import Link from "next/link";
 import { Image, Text } from "@/components";
 import { Project } from "@/types";
 
-import SkillBubble from "../SkillBubble";
-
 import styles from "./ProjectCard.module.scss";
+import { useMemo } from "react";
 
 type ProjectCardProps = {
   data: Project;
-  minHeight?: string;
 };
 
-const ProjectCard = ({ data, minHeight = "40vh" }: ProjectCardProps) => {
-  const {
-    slug,
-    title,
-    alias,
-    summary,
-    company,
-    techUsed,
-    imgMobile,
-    imgDesktop,
-    firstColor,
-    secondColor,
-  } = data;
+const ProjectCard = ({ data }: ProjectCardProps) => {
+  const { slug, alias, summary, imgMobile, imgDesktop, firstColor, secondColor } = data;
 
-  console.info("imgDesktop: ", imgDesktop);
+  function hashString(str: string) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (hash << 5) - hash + str.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  const height = useMemo(() => {
+    const step = 20;
+    const min = 450;
+    const max = 700;
+    const hash = hashString(slug + alias);
+    const range = Math.floor((max - min) / step) + 1;
+    return min + (hash % range) * step;
+  }, [slug]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ height }}>
       <div
         className={styles.backdrop}
         style={{
@@ -41,19 +44,17 @@ const ProjectCard = ({ data, minHeight = "40vh" }: ProjectCardProps) => {
       </div>
       <div className={styles.content}>
         <div className="flex flex-row gap-2 items-center">
-          <Text weight="bold" tag="h3" size="xxxlarge" color="white">
+          <Text weight="bold" tag="h3" size="d-small" color="white">
             {alias}
           </Text>
         </div>
-        <Text color="white" size="small" className="opacity-70">
+        <Text color="white" className="opacity-70" size="large">
           {summary}
         </Text>
-        <SkillBubble data={techUsed} className="pr-6" />
-        <Link href={`/project/${slug}`} className={styles.cta}>
+        <Link href={`/projects/${slug}`} className={styles.cta}>
           <Text weight="semibold" color="white">
             See Detail
           </Text>
-          <h1 className={styles.name}>Fajri</h1>
         </Link>
       </div>
     </div>

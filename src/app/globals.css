@@ -1,110 +1,118 @@
-@import 'tailwindcss' layer(utilities);
+/* globals.css */
+@import "tailwindcss";
 
-/* @tailwind base;
-@tailwind components; */
-@import 'tailwindcss/utilities' layer(utilities);
+/* ----------------------
+   Tailwind v4 theme
+------------------------ */
+@theme {
+  /* Colors */
+  --color-primary-100: #e9f5f8;
+  --color-primary-200: #d3ecf2;
+  --color-primary-300: #bce2eb;
+  --color-primary-400: #219ebc;
+  --color-primary-500: #4db1c9;
+  --color-secondary-100: #62dbff;
+  --color-secondary-200: #4eb8d7;
+  --color-secondary-300: #277288;
+  --color-secondary-400: #144f61;
+  --color-secondary-500: #002c39;
+  --color-grey-50: #f9fafb;
+  --color-grey-100: #f3f4f6;
+  --color-grey-200: #e5e7eb;
+  --color-grey-300: #d1d5db;
+  --color-grey-400: #9ca3af;
+  --color-grey-500: #6b7280;
+  --color-grey-600: #4b5563;
+  --color-grey-700: #374151;
+  --color-grey-800: #1c2431;
+  --color-grey-900: #111827;
+  --color-blue-50: #f0f5ff;
+  --color-blue-250: #79d0f5;
+  --color-blue-400: #5f9dfb;
+  --color-blue-500: #3784fb;
+  --color-loss-100: #e73c46;
+  --color-grey-unknown: #ffffff;
+  --color-profit-100: #27b156;
+  --color-bg-base: #ffffff;
+  --color-bg-disable: #c5c5c5;
+  --color-bg-overlay: rgba(0, 19, 31, 0.6);
+  --color-bg-sheet: #fbfbfb;
+  --color-text-disable: #e1e1e1;
+  --color-text-50: #ffffff;
+  --color-text-100: #bababa;
+  --color-text-300: #70747d;
+  --color-text-500: #111827;
+  --color-divider-100: #f3f4f6;
+  --color-line-100: #9ca3af;
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-success-50: #eafff0;
+  --color-success-100: #e9f7ee;
+  --color-success-300: #bff1cd;
+  --color-success-400: #5eb27b;
+  --color-success-500: #27b156;
+  --color-error-50: #ffe7e7;
+  --color-error-100: #fbecec;
+  --color-error-300: #ffbebe;
+  --color-error-400: #de7777;
+  --color-error-500: #db3e3e;
+  --color-notice-100: #ecf0f4;
+  --color-notice-500: #466591;
+  --color-warning-100: #fff6e6;
+  --color-warning-500: #fba500;
+  --color-profit: #5fd788;
+  --color-icon-primary: #111827;
+  --color-icon-secondary: #9ca3af;
+  --color-icon-tertiary: #219ebc;
+  --color-icon-disable: #33424c;
+  --color-turq: #25e0ca;
+  --color-teal: #3aafa1;
+  --color-honey: #ffb703;
+  --color-raspberry: #e73c46;
+  --color-dark-blue: #022964;
+  --color-purple: #b523fa;
+  --color-pink: #ec6890;
+  --color-red: #e86062;
+  --color-orange: #ff8c39;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-sapphire: #002153;
 
-:root {
-  --primary-100: #e9f5f8;
-  --primary-200: #d3ecf2;
-  --primary-300: #bce2eb;
-  --primary-400: #219ebc;
-  --primary-500: #4db1c9;
-  --secondary-100: #62dbff;
-  --secondary-200: #4eb8d7;
-  --secondary-300: #277288;
-  --secondary-400: #144f61;
-  --secondary-500: #002c39;
-  --grey-50: #f9fafb;
-  --grey-100: #f3f4f6;
-  --grey-200: #e5e7eb;
-  --grey-300: #d1d5db;
-  --grey-400: #9ca3af;
-  --grey-500: #6b7280;
-  --grey-600: #4b5563;
-  --grey-700: #374151;
-  --grey-800: #1c2431;
-  --grey-900: #111827;
-  --blue-50: #f0f5ff;
-  --blue-250: #79d0f5;
-  --blue-400: #5f9dfb;
-  --blue-500: #3784fb;
-  --loss-100: #e73c46;
-  --grey-unknown: #ffffff;
-  --profit-100: #27b156;
-  --bg-base: #ffffff;
-  --bg-disable: #c5c5c5;
-  --bg-overlay: rgba(0, 19, 31, 0.6);
-  --bg-sheet: #fbfbfb;
-  --text-disable: #e1e1e1;
-  --text-50: #ffffff;
-  --text-100: #bababa;
-  --text-300: #70747d;
-  --text-500: #111827;
-  --divider-100: #f3f4f6;
-  --line-100: #9ca3af;
-  --neutral-50: #f9fafb;
-  --neutral-100: #f3f4f6;
-  --neutral-200: #e5e7eb;
-  --neutral-300: #d1d5db;
-  --neutral-400: #9ca3af;
-  --success-50: #eafff0;
-  --success-100: #e9f7ee;
-  --success-300: #bff1cd;
-  --success-400: #5eb27b;
-  --success-500: #27b156;
-  --error-50: #ffe7e7;
-  --error-100: #fbecec;
-  --error-300: #ffbebe;
-  --error-400: #de7777;
-  --error-500: #db3e3e;
-  --notice-100: #ecf0f4;
-  --notice-500: #466591;
-  --warning-100: #fff6e6;
-  --warning-500: #fba500;
-  --profit: #5fd788;
-  --icon-primary: #111827;
-  --icon-secondary: #9ca3af;
-  --icon-tertiary: #219ebc;
-  --icon-disable: #33424c;
-  --turq: #25e0ca;
-  --teal: #3aafa1;
-  --honey: #ffb703;
-  --raspberry: #e73c46;
-  --dark-blue: #022964;
-  --purple: #b523fa;
-  --pink: #ec6890;
-  --red: #e86062;
-  --orange: #ff8c39;
-  --white: #ffffff;
-  --black: #000000;
-  --sapphire: #002153;
-}
+  /* Font sizes */
+  --text-xxsmall: 9px;
+  --text-xsmall: 10px;
+  --text-small: 12px;
+  --text-medium: 14px;
+  --text-large: 16px;
+  --text-xlarge: 18px;
+  --text-xxlarge: 20px;
+  --text-xxxlarge: 22px;
+  --text-d-xsmall: 24px;
+  --text-d-small: 30px;
+  --text-d-medium: 36px;
+  --text-d-large: 48px;
+  --text-d-xlarge: 72px;
 
-[data-theme="dark"] {
-  --primary-100: #e9f5f8;
-}
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-* {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
+  /* Breakpoints */
+  --sm: 770px;
+  --md: 880px;
+  --lg: 1100px;
+  --xl: 1200px;
 }
 
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  /* background: var(--bg-base); */
-  /* min-height: 100vh; */
-  /* -ms-overflow-style: none; 
-  scrollbar-width: none;
-  overflow: auto; */
   background: #17162a;
 }
-
-/* ::-webkit-scrollbar {
-  display: none; 
-} */
 
 h1,
 h2,
@@ -124,5 +132,11 @@ button:focus {
   outline: 0 !important;
   box-shadow: none !important;
   -webkit-tap-highlight-color: transparent !important;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* ----------------------
+   Dark theme example
+------------------------ */
+[data-theme="dark"] {
+  --primary-100: #e9f5f8;
 }

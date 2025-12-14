@@ -20,7 +20,7 @@ export async function getCompanies(): Promise<Company[] | undefined> {
       ["order"],
       "desc",
     ) || []
-  );
+  ).filter((dt) => dt?.isFulltime);
 }
 
 export async function getExpertise(): Promise<Expertise[] | undefined> {

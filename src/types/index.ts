@@ -1,3 +1,5 @@
+import { Document } from "@contentful/rich-text-types";
+
 type RelationshipKey = {
   sys: {
     id: string;
@@ -64,6 +66,17 @@ export type Company = {
   order: number;
   role: string;
   accomplishments: string[];
+  isFulltime?: boolean;
+};
+
+export type About = {
+  name: string;
+  cvUrl: string;
+  summary: string;
+  githubUrl: string;
+  description: string;
+  linkedinUrl: string;
+  instagramUrl: string;
 };
 
 export type Configuration = {
@@ -92,6 +105,7 @@ export type Project = {
   desktopThumbnail: RelationshipKey;
   imgMobile: string;
   imgDesktop: string;
+  details: Document;
 };
 
 export type Skill = {

@@ -1,33 +1,31 @@
+@use "/src/styles/globals.scss" as *;
+
 .cta {
+  @include glass;
   margin-top: 6px;
-  padding: 6px 18px;
-  border-radius: 8px;
-  background: #ffffff33;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px hsla(0, 0%, 58.8%, 0.5);
 }
 
 .container {
-  position: relative;
-  border: solid 1px hsla(0, 0%, 58.8%, 0.5);
-  border-radius: 10px;
+  width: 100%;
   overflow: hidden;
-  // min-height: 40vh;
+  position: relative;
+  border-radius: 10px;
+  border: solid 1px hsla(0, 0%, 58.8%, 0.5);
 
   .content {
     left: 16x;
-    bottom: -80px;
+    gap: 12px;
+    width: 100%;
+    bottom: -45px;
     padding: 15px;
-    padding-bottom: 60px;
-    position: absolute;
-    z-index: 100 !important;
     display: flex;
+    position: absolute;
+    padding-bottom: 60px;
     flex-direction: column;
+    z-index: 100 !important;
     justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.427);
     backdrop-filter: blur(50px);
+    background: rgba(0, 0, 0, 0.427);
   }
 
   .techWrapper {
@@ -75,24 +73,42 @@
     width: 100%;
     height: 100%;
     position: relative;
-    // background: linear-gradient(to bottom right, #4ca870, #1f392c);
 
     .image1 {
       top: 5%;
-      right: -30%;
+      right: -12%;
       display: flex;
       position: absolute;
       align-items: center;
+      transform: scale(0.75);
       justify-content: center;
       transition: all 0.5s ease-in-out;
     }
 
     .image2 {
+      top: 20%;
+      left: -12%;
+      transform: scale(0.75);
       position: absolute;
       transition: all 0.5s ease-in-out;
-      top: 15%;
-      left: -30%;
     }
+
+    // .image1 {
+    //   top: 5%;
+    //   right: -30%;
+    //   display: flex;
+    //   position: absolute;
+    //   align-items: center;
+    //   justify-content: center;
+    //   transition: all 0.5s ease-in-out;
+    // }
+
+    // .image2 {
+    //   position: absolute;
+    //   transition: all 0.5s ease-in-out;
+    //   top: 15%;
+    //   left: -30%;
+    // }
   }
 
   &:hover {
@@ -121,19 +137,31 @@
 
       .image1 {
         top: 5%;
-        right: -12%;
-        transform: scale(0.75);
-        // transition: all 0.5s ease-in-out;
+        right: -20%;
+        transform: scale(0.9);
         transition: all 0.5s cubic-bezier(0.62, 0.01, 0.33, 0.97);
       }
 
       .image2 {
-        top: 20%;
-        left: -15%;
-        transform: scale(0.75);
-        // transition: all 0.5s ease-in-out;
+        top: 15%;
+        left: -20%;
+        transform: scale(0.9);
         transition: all 0.5s cubic-bezier(0.62, 0.01, 0.33, 0.97);
       }
+
+      // .image1 {
+      //   top: 5%;
+      //   right: -12%;
+      //   transform: scale(0.75);
+      //   transition: all 0.5s cubic-bezier(0.62, 0.01, 0.33, 0.97);
+      // }
+
+      // .image2 {
+      //   top: 20%;
+      //   left: -15%;
+      //   transform: scale(0.75);
+      //   transition: all 0.5s cubic-bezier(0.62, 0.01, 0.33, 0.97);
+      // }
     }
   }
 }

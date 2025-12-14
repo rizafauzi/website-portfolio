@@ -32,15 +32,13 @@ const Text = ({
   const Tag = tag || "p";
   const heading = ["h1", "h2", "h3", "h4", "h5", "h6"].includes(tag || "");
 
-  console.info("Tag: ", Tag);
-  console.info("heading: ", heading);
   return (
     <Tag
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       style={heading ? bebasNeue.style : openSans.style}
       className={`${heading ? bebasNeue.className : openSans.className} ${className} ${textWeight(
         weight,
-      )} text-xxsmall ${textColor(color)} ${ellipsis ? "truncate" : ""}`}
+      )} ${textSize(size)} ${textColor(color)} ${ellipsis ? "truncate" : ""}`}
     >
       {children}
     </Tag>

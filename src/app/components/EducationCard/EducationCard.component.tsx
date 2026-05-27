@@ -1,8 +1,8 @@
 import React from "react";
+import classNames from "classnames";
+
 import { Image, Text } from "@/components";
 import { IEducation } from "@/constants/education";
-import { IExperience } from "@/constants/experience";
-import classNames from "classnames";
 
 import styles from "./EducationCard.module.scss";
 

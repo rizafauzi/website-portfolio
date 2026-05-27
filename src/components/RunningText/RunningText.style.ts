@@ -1,4 +1,4 @@
-import { ColorType } from "@styles/color.type";
+import { ColorType } from "@/styles/color.type";
 
 export const textWeight = (weight: string) => {
   switch (weight) {

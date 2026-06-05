@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-grain="heavy">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Riza Fauzi — Software Engineer · UI Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yeseva+One&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hifi.css" />
+</head>
+<body>
+
+<!-- Backdrop gradient blobs + heavy grain -->
+<div class="backdrop" aria-hidden="true">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Top right: theme toggle -->
+<div class="topbar">
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
+</div>
+
+<!-- TOP NAVBAR (fades in past Landing) -->
+<header class="topnav" id="topnav" aria-label="Primary">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="#home">Riza<em style="font-style: italic; background: var(--accent-grad); -webkit-background-clip: text; background-clip: text; color: transparent;">.</em></a>
+    <nav class="topnav-links" id="topnavLinks" aria-label="Sections">
+      <a href="#about" data-target="about">About</a>
+      <a href="#projects" data-target="projects">Projects</a>
+      <a href="#skills" data-target="skills">Skills</a>
+      <a href="#work" data-target="work">Work</a>
+      <a href="#education" data-target="education">Education</a>
+      <a href="#" data-target="lab">Lab</a>
+    </nav>
+    <button class="topnav-toggle" id="topnavToggle" aria-label="Open menu" aria-expanded="false">
+      <svg class="ic-hamburger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="6" y1="18" x2="18" y2="6"></line></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile full-page menu -->
+<div class="topnav-modal" id="topnavModal" aria-hidden="true">
+  <nav aria-label="Mobile menu">
+    <a href="#about" data-target="about">About</a>
+    <a href="#projects" data-target="projects">Projects</a>
+    <a href="#skills" data-target="skills">Skills</a>
+    <a href="#work" data-target="work">Work</a>
+    <a href="#education" data-target="education">Education</a>
+    <a href="#" data-target="lab">Lab</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ 01 · LANDING ============ -->
+  <section class="landing" id="home" data-screen-label="01 Landing">
+    <div class="shell">
+      <article class="card" id="landingCard">
+        <div class="grid">
+          <div>
+            <div class="t-eyebrow">Sampurasun · Halo · Hello</div>
+            <h1 class="hello"><em style="letter-spacing: -3px; text-align: center; padding: 0 20px 0 0;">Hi!</em></h1>
+            <h1 class="name" style="font-family: 'Bebas Neue'; font-weight: 300;">I'm Riza.</h1>
+            <p class="roles" style="font-size: 10px; width: 443px;">
+              Software Engineer
+              <span class="dot"></span>
+              UI Designer
+              <span class="dot"></span>
+              Fulltime Lerner
+            </p>
+            <p class="blurb">
+              I build for humans first, machines second. 6+ years shipping web &amp; mobile products,
+              recently around fintech, streaming, and quick commerce — with a soft spot for design systems
+              and motion details that make a thing feel <em>alive</em>.
+            </p>
+            <div class="cta-row">
+              <a class="btn primary" href="#projects">See projects <span aria-hidden="true">↘</span></a>
+              <a class="btn" href="#" download>Resume <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="memoji-wrap">
+            <div class="halo"></div>
+            <div class="memoji" id="memoji">
+              <img src="assets/memoji_mac.png" alt="Riza's 3D memoji" />
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 02 · ABOUT ============ -->
+  <section class="about" id="about" data-screen-label="02 About">
+    <div class="section-title" aria-hidden="true">
+      <div class="row r1">
+        <span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span>
+      </div>
+      <div class="row r2">
+        <span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span><span>About</span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="body">
+        <div>
+          <p class="quote" style="color: rgb(0, 0, 0);">First of all, <em>glad to meet you.</em></p>
+          <p class="lead">
+            I&rsquo;m a frontend-leaning engineer based in Indonesia, working at the intersection of design and code.
+            I'm experienced in designing and developing web &amp; mobile apps with a passion for bringing
+            delightful, human-centric experiences to life. Also interested in front-end engineering and
+            everything related to visual — photography, web &amp; graphic design.
+          </p>
+        </div>
+        <div class="memoji-side">
+          <img src="assets/memoji_celebrate.png" alt="Memoji celebrating" />
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="num"><em>6+</em></div><div class="lbl">Years shipping</div></div>
+        <div class="stat"><div class="num"><em>12</em></div><div class="lbl">Projects shipped</div></div>
+        <div class="stat"><div class="num"><em>5</em></div><div class="lbl">Companies</div></div>
+        <div class="stat"><div class="num"><em>3</em></div><div class="lbl">Languages spoken</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · PROJECTS ============ -->
+  <section class="projects" id="projects" data-screen-label="03 Projects">
+    <div class="section-title" aria-hidden="true">
+      <div class="row r1">
+        <span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span>
+      </div>
+      <div class="row r2">
+        <span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span><span>Projects</span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="masonry">
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #7ED19A 0%, #5198B7 100%); --p-aspect: 4 / 5;">
+          <img class="shot" src="assets/bibit_desktop.png" alt="Bibit Backoffice screenshots" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_bibit.png" alt="" /></div>
+              <div>
+                <div class="year">2020 — Present</div>
+                <h3>Backoffice UI</h3>
+              </div>
+            </div>
+            <p>Internal SaaS that powers Bibit's investor onboarding, reject flows, and S-Invest reconciliation.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #FF9CE9 0%, #8E64C4 100%); --p-aspect: 3 / 4;">
+          <img class="shot" src="assets/playfest_desktop.jpg" alt="Playfest" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+              <div>
+                <div class="year">2020</div>
+                <h3>Playfest</h3>
+              </div>
+            </div>
+            <p>Annual Narasi.tv festival, online-first edition during COVID-19.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #FF6B6B 0%, #6B4FFF 100%); --p-aspect: 5 / 6;">
+          <img class="shot" src="assets/rcti_desktop.png" alt="House of Talent — RCTI+" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_rcti.png" alt="" /></div>
+              <div>
+                <div class="year">2020</div>
+                <h3>House of Talent</h3>
+              </div>
+            </div>
+            <p>Digital talent-show + social network embedded inside RCTI+.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #60CECE 0%, #329B3D 100%); --p-aspect: 4 / 5;">
+          <img class="shot" src="assets/virtual_playfest_desktop.jpg" alt="Virtual Playfest" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+              <div>
+                <div class="year">2020</div>
+                <h3>Virtual Playfest</h3>
+              </div>
+            </div>
+            <p>Narasi.tv's first virtual festival — live talks, art installations, audience watch-parties.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #FFB37C 0%, #FF5C7C 100%); --p-aspect: 3 / 4;">
+          <img class="shot" src="assets/lms_desktop.jpg" alt="Loudspeaker LMS" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_xapiens.png" alt="" /></div>
+              <div>
+                <div class="year">2020</div>
+                <h3>Loudspeaker</h3>
+              </div>
+            </div>
+            <p>LMS for MBSS ship crews — interactive articles, video, quizzes, assessments.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #5BA8FF 0%, #C846FF 100%); --p-aspect: 4 / 5;">
+          <img class="shot" src="assets/narasi_tv_desktop.jpg" alt="Narasi.tv" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+              <div>
+                <div class="year">2020 — Present</div>
+                <h3>Narasi.tv</h3>
+              </div>
+            </div>
+            <p>The official Narasi TV portal — design, scaffolding, performance pass.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #FFD86C 0%, #FF7C3B 100%); --p-aspect: 5 / 6;">
+          <img class="shot" src="assets/event_narasi_desktop.jpg" alt="Narasi.tv events" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+              <div>
+                <div class="year">2020 — Present</div>
+                <h3>Narasi.tv Events</h3>
+              </div>
+            </div>
+            <p>Past &amp; upcoming Narasi events &amp; festivals — single source of truth.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #FF6B9D 0%, #6B4FFF 100%); --p-aspect: 3 / 4;">
+          <img class="shot" src="assets/ibam_desktop.jpg" alt="Indonesia Butuh Anak Muda" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+              <div>
+                <div class="year">2020 — Present</div>
+                <h3>IBAM</h3>
+              </div>
+            </div>
+            <p>Conference + community talkshow + art-installation hub.</p>
+          </div>
+        </a>
+
+        <a class="pcard" href="#" style="--p-grad: linear-gradient(160deg, #C24D3D 0%, #88318a 100%); --p-aspect: 4 / 5;">
+          <img class="shot" src="assets/arms_desktop.jpg" alt="ARMS — Asset Resource Management System" />
+          <span class="arrow" aria-hidden="true">↗</span>
+          <div class="meta">
+            <div class="row">
+              <div class="logo"><img src="assets/logo_xapiens.png" alt="" /></div>
+              <div>
+                <div class="year">2019</div>
+                <h3>ARMS</h3>
+              </div>
+            </div>
+            <p>Petrosea's asset &amp; roster system. SAP-integrated. Web (admin) + mobile (crew).</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · SKILLS ============ -->
+  <section class="skills" id="skills" data-screen-label="04 Skills">
+    <div class="section-title" aria-hidden="true">
+      <div class="row r1">
+        <span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span>
+      </div>
+      <div class="row r2">
+        <span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span><span>Skills</span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="chips">
+        <a class="chip featured" href="#">TypeScript</a>
+        <a class="chip" href="#">React</a>
+        <a class="chip featured" href="#">Next.js</a>
+        <a class="chip" href="#">Vue</a>
+        <a class="chip" href="#">Nuxt</a>
+        <a class="chip featured" href="#">Swift</a>
+        <a class="chip" href="#">SwiftUI</a>
+        <a class="chip" href="#">Node.js</a>
+        <a class="chip" href="#">Express</a>
+        <a class="chip featured" href="#">GraphQL</a>
+        <a class="chip" href="#">PostgreSQL</a>
+        <a class="chip" href="#">MySQL</a>
+        <a class="chip" href="#">Prisma</a>
+        <a class="chip" href="#">Figma</a>
+        <a class="chip" href="#">Sketch</a>
+        <a class="chip" href="#">Adobe XD</a>
+        <a class="chip" href="#">Photoshop</a>
+        <a class="chip" href="#">Lightroom</a>
+        <a class="chip" href="#">After Effects</a>
+        <a class="chip" href="#">Premiere</a>
+        <a class="chip" href="#">Jenkins</a>
+        <a class="chip" href="#">Notion</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · WORK ============ -->
+  <section class="work" id="work" data-screen-label="05 Work">
+    <div class="section-title" aria-hidden="true">
+      <div class="row r1">
+        <span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span>
+      </div>
+      <div class="row r2">
+        <span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span><span>Work</span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="stack-wrap">
+        <div class="stack">
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #14B8A6 0%, #6366F1 100%);">
+            <div class="logo"><img src="assets/logo_flock.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">S-Quantum Engine</span>
+              <span class="t2">Senior Mobile Engineer · Full-time</span>
+            </div>
+            <span class="duration">Aug 2023 — <span class="now">Present</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #FF5C7C 0%, #C846FF 100%);">
+            <div class="logo"><img src="assets/logo_bibit.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">Bibit.id</span>
+              <span class="t2">Lead Frontend Engineer · Full-time</span>
+            </div>
+            <span class="duration">Nov 2020 — <span class="now">Present</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #DC59DF 0%, #5236A1 100%);">
+            <div class="logo"><img src="assets/logo_flock.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">Vision+</span>
+              <span class="t2">Frontend Engineer · Freelance</span>
+            </div>
+            <span class="duration">2022 — 2023</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #2A5E7C 0%, #411F74 100%);">
+            <div class="logo"><img src="assets/logo_rcti.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">RCTI+</span>
+              <span class="t2">Frontend Engineer · Contract</span>
+            </div>
+            <span class="duration">May 2021 — Jul 2021</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #60CECE 0%, #329B3D 100%);">
+            <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">Narasi.tv</span>
+              <span class="t2">Frontend Developer · Contract</span>
+            </div>
+            <span class="duration">2020 — 2021</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #FFB8FB 0%, #C24D3D 100%);">
+            <div class="logo"><img src="assets/logo_xapiens.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">Xapiens (XTI)</span>
+              <span class="t2">Fullstack Engineer · Full-time</span>
+            </div>
+            <span class="duration">Dec 2018 — Nov 2020</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="xp" href="#" style="--xp-grad: linear-gradient(160deg, #E37575 0%, #AC46C6 100%);">
+            <div class="logo"><img src="assets/logo_ugm.png" alt="" /></div>
+            <div class="body">
+              <span class="t1">UGM</span>
+              <span class="t2">Assistant Lecturer · Full-time</span>
+            </div>
+            <span class="duration">Aug 2016 — May 2018</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · EDUCATION ============ -->
+  <section class="edu" id="education" data-screen-label="06 Education">
+    <div class="section-title" aria-hidden="true">
+      <div class="row r1">
+        <span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span>
+      </div>
+      <div class="row r2">
+        <span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span><span>Education</span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="list">
+
+        <div class="item" style="--xp-grad: linear-gradient(160deg, #FFB37C 0%, #FF5C7C 100%);">
+          <div class="logo"><img src="assets/logo_ui.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">Universitas Indonesia</div>
+            <div class="t2">Faculty of Computer Science · 2018 — 2020</div>
+          </div>
+          <div class="gpa"><em>3.74</em></div>
+        </div>
+
+        <div class="item" style="--xp-grad: linear-gradient(160deg, #FFD86C 0%, #C846FF 100%);">
+          <div class="logo"><img src="assets/logo_ugm.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">Universitas Gadjah Mada</div>
+            <div class="t2">Vocational School — Computer &amp; Information Systems · 2014 — 2017</div>
+          </div>
+          <div class="gpa"><em>3.64</em></div>
+        </div>
+
+        <div class="item" style="--xp-grad: linear-gradient(160deg, #5BA8FF 0%, #34D399 100%);">
+          <div class="logo" style="background: var(--xp-grad);">
+            <span style="color: white; font-size: 24px;">🧠</span>
+          </div>
+          <div class="body">
+            <div class="t1">Postgraduate · TBD</div>
+            <div class="t2">Soon. Stay tuned.</div>
+          </div>
+          <div class="gpa" style="font-size: 14px; color: var(--ink-soft);">SOON</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div style="height: 120px;" aria-hidden="true"></div>
+
+</main>
+
+<!-- ============ Removed dock — replaced with sticky topnav above ============ -->
+
+<!-- ============ TWEAKS PANEL ============ -->
+<aside class="tweaks" id="tweaks" hidden>
+  <h3>Tweaks <button id="twClose">close</button></h3>
+  <div class="grp">
+    <div class="lbl">Theme</div>
+    <div class="segs" data-tw="theme">
+      <button data-val="dark" class="on">Dark</button>
+      <button data-val="light">Light</button>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="lbl">Grain</div>
+    <div class="segs" data-tw="grain">
+      <button data-val="heavy" class="on">Heavy</button>
+      <button data-val="medium">Med</button>
+      <button data-val="subtle">Subtle</button>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="lbl">Accent</div>
+    <div class="segs" data-tw="accent">
+      <button data-val="coral" class="on">Coral</button>
+      <button data-val="ocean">Ocean</button>
+      <button data-val="ember">Ember</button>
+    </div>
+  </div>
+</aside>
+
+<script>
+  window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "theme": "dark",
+    "grain": "heavy",
+    "accent": "coral"
+  }/*EDITMODE-END*/;
+</script>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  const tweaks = document.getElementById('tweaks');
+
+  // Accent palettes — single-hue family options
+  const ACCENTS = {
+    coral: { a1: '#FFB37C', a2: '#FF5C7C', a3: '#C846FF' },
+    ocean: { a1: '#5BA8FF', a2: '#6366F1', a3: '#A88BFF' },
+    ember: { a1: '#FFD86C', a2: '#FF7C3B', a3: '#DB3434' }
+  };
+
+  function applyAccent(name) {
+    const p = ACCENTS[name] || ACCENTS.coral;
+    root.style.setProperty('--accent-2', p.a1);
+    root.style.setProperty('--accent', p.a2);
+    root.style.setProperty('--accent-3', p.a3);
+    root.style.setProperty('--accent-grad', `linear-gradient(120deg, ${p.a1} 0%, ${p.a2} 50%, ${p.a3} 100%)`);
+  }
+
+  function applyTweaks(values) {
+    if (values.theme) root.setAttribute('data-theme', values.theme);
+    if (values.grain) root.setAttribute('data-grain', values.grain);
+    if (values.accent) applyAccent(values.accent);
+    Object.entries(values).forEach(([k, v]) => {
+      const segs = tweaks.querySelector(`[data-tw="${k}"]`);
+      if (!segs) return;
+      segs.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.val === v));
+    });
+  }
+
+  applyTweaks(window.__TWEAK_DEFAULTS || {});
+
+  // ---------- Theme toggle (top-right) ----------
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    applyTweaks({ theme: next });
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: next } }, '*'); } catch (e) {}
+  });
+
+  // ---------- Tweak segs ----------
+  tweaks.querySelectorAll('.segs').forEach(seg => {
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      const key = seg.dataset.tw;
+      const val = btn.dataset.val;
+      applyTweaks({ [key]: val });
+      try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*'); } catch (e) {}
+    });
+  });
+
+  document.getElementById('twClose').addEventListener('click', () => {
+    tweaks.hidden = true;
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
+  });
+
+  window.addEventListener('message', e => {
+    const d = e && e.data;
+    if (!d || typeof d !== 'object') return;
+    if (d.type === '__activate_edit_mode') tweaks.hidden = false;
+    else if (d.type === '__deactivate_edit_mode') tweaks.hidden = true;
+  });
+
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+
+  // ---------- Memoji eye-track + landing card tilt ----------
+  const memoji = document.getElementById('memoji');
+  const landingCard = document.getElementById('landingCard');
+  let cardRect = null;
+
+  function refreshRect() { cardRect = landingCard.getBoundingClientRect(); }
+  refreshRect();
+  window.addEventListener('resize', refreshRect);
+  window.addEventListener('scroll', refreshRect, { passive: true });
+
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+  document.addEventListener('mousemove', (e) => {
+    // Memoji 3D head tilt — always tracks cursor
+    if (memoji) {
+      const rect = memoji.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) / window.innerWidth;
+      const dy = (e.clientY - cy) / window.innerHeight;
+      const ry = clamp(dx * 22, -12, 12);
+      const rx = clamp(-dy * 16, -10, 10);
+      memoji.style.transform = `rotateY(${ry}deg) rotateX(${rx}deg)`;
+    }
+    // Landing card subtle tilt (only when hovered)
+    if (landingCard && landingCard.matches(':hover') && cardRect) {
+      const px = (e.clientX - cardRect.left) / cardRect.width - 0.5;
+      const py = (e.clientY - cardRect.top) / cardRect.height - 0.5;
+      landingCard.style.setProperty('--tilt-y', `${clamp(px * 6, -4, 4)}deg`);
+      landingCard.style.setProperty('--tilt-x', `${clamp(-py * 6, -4, 4)}deg`);
+    }
+  });
+  landingCard.addEventListener('mouseleave', () => {
+    landingCard.style.setProperty('--tilt-y', '0deg');
+    landingCard.style.setProperty('--tilt-x', '0deg');
+  });
+
+  // ---------- Topnav fade-in past Landing + active section + mobile modal ----------
+  const topnav = document.getElementById('topnav');
+  const topnavLinks = document.querySelectorAll('.topnav-links a[data-target], .topnav-modal nav a[data-target]');
+  const modal = document.getElementById('topnavModal');
+  const toggle = document.getElementById('topnavToggle');
+
+  const landing = document.getElementById('home');
+  const navIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      // when landing is OUT of view (mostly scrolled past) → show topnav
+      if (en.target === landing) {
+        topnav.classList.toggle('is-visible', !en.isIntersecting || en.intersectionRatio < 0.4);
+      }
+    });
+  }, { threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] });
+  navIO.observe(landing);
+
+  // Active section tracking
+  const navMap = new Map();
+  topnavLinks.forEach(a => {
+    const k = a.dataset.target;
+    if (!navMap.has(k)) navMap.set(k, []);
+    navMap.get(k).push(a);
+  });
+  const sectionIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting && en.intersectionRatio > 0.3) {
+        topnavLinks.forEach(a => a.classList.remove('is-active'));
+        const arr = navMap.get(en.target.id);
+        if (arr) arr.forEach(a => a.classList.add('is-active'));
+      }
+    });
+  }, { rootMargin: '-30% 0px -50% 0px', threshold: [0, 0.25, 0.5] });
+  document.querySelectorAll('section[id]').forEach(s => sectionIO.observe(s));
+
+  // Smooth scroll
+  topnavLinks.forEach(a => {
+    a.addEventListener('click', e => {
+      const target = a.dataset.target;
+      const el = document.getElementById(target);
+      if (el) {
+        e.preventDefault();
+        // close modal if open
+        closeModal();
+        const top = el.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    toggle.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+  toggle.addEventListener('click', () => {
+    if (modal.classList.contains('is-open')) closeModal(); else openModal();
+  });
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-grain="heavy">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Made with TypeScript — Riza Fauzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yeseva+One&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hifi.css" />
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true">
+  <div class="blob b1" style="background: #3178C6;"></div>
+  <div class="blob b2" style="background: #5BA8FF;"></div>
+  <div class="blob b3" style="background: #A88BFF;"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<a class="topback" href="Portfolio Hi-Fi · Home.html">
+  <span aria-hidden="true">←</span> Back home
+</a>
+
+<div class="topbar">
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+  </button>
+</div>
+
+<main>
+  <div class="detail-shell" style="padding-top: 120px; padding-bottom: 60px; max-width: 880px;">
+
+    <!-- HEADER · "Made with TypeScript" -->
+    <header class="skill-header" style="--sk-grad: linear-gradient(120deg, #3178C6 0%, #5BA8FF 50%, #A88BFF 100%); --sk-glow: rgba(91, 168, 255, 0.4);">
+      <div class="logo">TS</div>
+      <div class="info">
+        <div class="eyebrow">Made with</div>
+        <h1>
+          <a href="https://www.typescriptlang.org" target="_blank" rel="noopener">TypeScript</a><a class="docs" href="https://www.typescriptlang.org" target="_blank" rel="noopener">↗ docs</a>
+        </h1>
+        <div class="stats">
+          <div><span class="v">9</span><span class="l">projects</span></div>
+          <div><span class="v">5+</span><span class="l">years</span></div>
+          <div><span class="v">5.3</span><span class="l">current</span></div>
+        </div>
+      </div>
+    </header>
+
+    <p style="font-size: 16px; color: var(--ink); max-width: 64ch; margin: 36px 0 0; line-height: 1.7;">
+      Daily-driver for everything I build on the web. I've been writing TypeScript across two startups, one media co.,
+      and a handful of personal projects since 2019 — strict mode by default, branded types for IDs, and codegen
+      everywhere I can get away with it.
+    </p>
+
+    <!-- 02 PROJECTS -->
+    <section id="projects" style="margin-top: 80px;" data-screen-label="02 Projects">
+      <h2 class="plain-title"><span class="num">02</span>Projects</h2>
+      <div class="project-rows">
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #7ED19A 0%, #5198B7 100%); --prow-glow: rgba(126, 209, 154, 0.35);">
+          <div class="logo"><img src="assets/logo_bibit.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">Backoffice UI</div>
+            <div class="t2">Bibit · 2020 — Present · TS 5.3 · Strict</div>
+          </div>
+          <div class="ver">Monorepo</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #14B8A6 0%, #6366F1 100%); --prow-glow: rgba(99, 102, 241, 0.35);">
+          <div class="logo" style="font-family: var(--font-display); color: white; font-size: 14px;">SQ</div>
+          <div class="body">
+            <div class="t1">Simobi+ Mobile</div>
+            <div class="t2">S-Quantum · 2023 — Present · TS 5.0</div>
+          </div>
+          <div class="ver">SwiftUI bridge</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #FF6B6B 0%, #6B4FFF 100%); --prow-glow: rgba(107, 79, 255, 0.35);">
+          <div class="logo"><img src="assets/logo_rcti.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">House of Talent (HOT)</div>
+            <div class="t2">RCTI+ · 2020 · TS 4.5</div>
+          </div>
+          <div class="ver">Next.js 12</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #FF9CE9 0%, #8E64C4 100%); --prow-glow: rgba(255, 156, 233, 0.35);">
+          <div class="logo"><img src="assets/logo_narasi.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">Playfest</div>
+            <div class="t2">Narasi.tv · 2020 · TS 4.0</div>
+          </div>
+          <div class="ver">Nuxt 2</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #FFB37C 0%, #FF5C7C 100%); --prow-glow: rgba(255, 92, 124, 0.35);">
+          <div class="logo"><img src="assets/logo_xapiens.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">Loudspeaker LMS</div>
+            <div class="t2">Xapiens · 2020 · TS 3.9</div>
+          </div>
+          <div class="ver">React 16</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #5BA8FF 0%, #C846FF 100%); --prow-glow: rgba(200, 70, 255, 0.35);">
+          <div class="logo">L3</div>
+          <div class="body">
+            <div class="t1">Lentera DS</div>
+            <div class="t2">Bibit · 2021 — Present · TS 5.2 · Strict</div>
+          </div>
+          <div class="ver">Design system</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+        <a class="prow" href="Portfolio Hi-Fi · Project Detail.html" style="--p-grad: linear-gradient(160deg, #C24D3D 0%, #88318a 100%); --prow-glow: rgba(194, 77, 61, 0.35);">
+          <div class="logo"><img src="assets/logo_xapiens.png" alt="" /></div>
+          <div class="body">
+            <div class="t1">ARMS</div>
+            <div class="t2">Petrosea · 2019 · TS 3.5</div>
+          </div>
+          <div class="ver">Node + React</div>
+          <div class="arrow" aria-hidden="true">↗</div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 03 PREV / NEXT -->
+    <section id="next" style="margin-top: 80px;" data-screen-label="03 Up next">
+      <div class="prevnext">
+        <a class="pn-card prev" href="#" style="--pn-glow: rgba(97, 218, 251, 0.4);">
+          <span class="arrow" aria-hidden="true">←</span>
+          <div class="lbl">Prev tech</div>
+          <div class="name" style="background: linear-gradient(120deg, #61DAFB, #5BA8FF); -webkit-background-clip: text; background-clip: text; color: transparent;">React</div>
+          <div class="sub">7 projects · 6+ years</div>
+        </a>
+        <a class="pn-card next" href="#" style="--pn-glow: rgba(255, 132, 64, 0.4);">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="lbl">Next tech</div>
+          <div class="name" style="background: linear-gradient(120deg, #FF8440, #F05138); -webkit-background-clip: text; background-clip: text; color: transparent;">Swift</div>
+          <div class="sub">2 projects · 2+ years</div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Dock nav removed -->
+
+<aside class="tweaks" id="tweaks" hidden>
+  <h3>Tweaks <button id="twClose">close</button></h3>
+  <div class="grp">
+    <div class="lbl">Theme</div>
+    <div class="segs" data-tw="theme">
+      <button data-val="dark" class="on">Dark</button>
+      <button data-val="light">Light</button>
+    </div>
+  </div>
+  <div class="grp">
+    <div class="lbl">Grain</div>
+    <div class="segs" data-tw="grain">
+      <button data-val="heavy" class="on">Heavy</button>
+      <button data-val="medium">Med</button>
+      <button data-val="subtle">Subtle</button>
+    </div>
+  </div>
+</aside>
+
+<script>
+  window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{ "theme": "dark", "grain": "heavy" }/*EDITMODE-END*/;
+</script>
+<script>
+(() => {
+  const root = document.documentElement;
+  const tweaks = document.getElementById('tweaks');
+  function applyTweaks(v) {
+    if (v.theme) root.setAttribute('data-theme', v.theme);
+    if (v.grain) root.setAttribute('data-grain', v.grain);
+    Object.entries(v).forEach(([k, val]) => {
+      const segs = tweaks.querySelector(`[data-tw="${k}"]`); if (!segs) return;
+      segs.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.val === val));
+    });
+  }
+  applyTweaks(window.__TWEAK_DEFAULTS || {});
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const cur = root.getAttribute('data-theme');
+    applyTweaks({ theme: cur === 'dark' ? 'light' : 'dark' });
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: root.getAttribute('data-theme') } }, '*'); } catch (e) {}
+  });
+  tweaks.querySelectorAll('.segs').forEach(seg => {
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button'); if (!btn) return;
+      applyTweaks({ [seg.dataset.tw]: btn.dataset.val });
+      try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [seg.dataset.tw]: btn.dataset.val } }, '*'); } catch (e) {}
+    });
+  });
+  document.getElementById('twClose').addEventListener('click', () => { tweaks.hidden = true; try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {} });
+  window.addEventListener('message', e => {
+    const d = e && e.data; if (!d || typeof d !== 'object') return;
+    if (d.type === '__activate_edit_mode') tweaks.hidden = false;
+    else if (d.type === '__deactivate_edit_mode') tweaks.hidden = true;
+  });
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+
+  // Dock active state
+  const dockLinks = document.querySelectorAll('.dock a[data-target]');
+  const sections = document.querySelectorAll('section[id]');
+  const dockMap = new Map();
+  dockLinks.forEach(a => dockMap.set(a.dataset.target, a));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting && en.intersectionRatio > 0.2) {
+        dockLinks.forEach(a => a.classList.remove('active'));
+        const dl = dockMap.get(en.target.id); if (dl) dl.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -50% 0px', threshold: [0, 0.25, 0.5] });
+  sections.forEach(s => io.observe(s));
+
+  dockLinks.forEach(a => {
+    if (a.getAttribute('href') && a.getAttribute('href').startsWith('#')) {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          const top = el.getBoundingClientRect().top + window.scrollY - 24;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

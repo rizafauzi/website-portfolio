@@ -1,6 +1,6 @@
-import React from "react";
 import classNames from "classnames";
 import dayjs from "dayjs";
+import Link from "next/link";
 
 import { Image, Text } from "@/components";
 import { Company } from "@/types";
@@ -29,7 +29,8 @@ const ExperienceCard = ({ data, isRight, className }: ExperienceCard) => {
   } = data;
 
   return (
-    <div className={classNames(styles.container, className)}>
+    <Link href={`/experiences/${slug}`} className={styles.link}>
+      <div className={classNames(styles.container, className)}>
       <div className={styles.experienceCard}>
         <div className={styles.companyTitle}>
           <Image width={60} height={60} alt={slug} src={image} className={styles.logo} />
@@ -76,13 +77,14 @@ const ExperienceCard = ({ data, isRight, className }: ExperienceCard) => {
           <Text color="white">{endedAt ? dayjs(endedAt).format("MMM YYYY") : "Present"}</Text>
         </div>
       </div>
-      <div
-        style={{
-          background: `linear-gradient(135deg, ${firstColor} 0%, ${secondColor} 100%)`,
-        }}
-        className={isRight ? styles.rightBackdrop : styles.backdrop}
-      />
-    </div>
+        <div
+          style={{
+            background: `linear-gradient(135deg, ${firstColor} 0%, ${secondColor} 100%)`,
+          }}
+          className={isRight ? styles.rightBackdrop : styles.backdrop}
+        />
+      </div>
+    </Link>
   );
 };
 

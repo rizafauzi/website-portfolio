@@ -1,5 +1,14 @@
+export { DetailGrid, DetailShell } from "./DetailShell";
+export { default as ExperienceSummary } from "./ExperienceSummary";
+export { default as HTMLRenderer } from "./HTMLRenderer";
 export { default as Image } from "./Image";
+export { default as InfiniteGallery } from "./InfiniteGallery";
 export { default as Layout } from "./Layout";
+export { default as PrevNext } from "./PrevNext";
+export { default as ProjectSummary } from "./ProjectSummary";
 export { default as RunningText } from "./RunningText";
+export { default as SectionHeading } from "./SectionHeading";
+export { default as SkillSummary } from "./SkillSummary";
 export { default as Text } from "./Text";
+export { default as TopBack } from "./TopBack";
 export { default as TypingText } from "./TypingText";

@@ -1,5 +1,10 @@
 @import "../../../styles/globals.scss";
 
+.link {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .container {
   height: 180px;
   width: fit-content;

@@ -1,0 +1,16 @@
+.sectionTitle {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  em {
+    font-style: italic;
+  }
+}
+
+.num {
+  font-size: 14px;
+  color: rgba(244, 241, 232, 0.4);
+  font-weight: 600;
+}

@@ -7,6 +7,7 @@ import { extractCompany, extractSkill } from "@/utils/value.utils";
 export async function getProjects(): Promise<Project[] | undefined> {
   const response = await apiRequest<Project, Skill | Company>("content_type=projects");
 
+  console.info('response?.itemszzzz: ', response?.items[0]?.fields?.details)
   const parsedData = response?.items?.map(item => ({
     ...item.fields,
     techUsed: item.fields.techStacks.map(dt =>

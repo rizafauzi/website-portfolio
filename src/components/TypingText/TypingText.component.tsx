@@ -4,7 +4,7 @@ import { memo } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 import { IText } from "../Text";
-import { openSans, yesevaOne } from "../Text/Text.component";
+import { bebasNeue, openSans } from "../Text/Text.component";
 import { textColor, textSize, textWeight } from "../Text/Text.style";
 
 type TypingTextProps = {

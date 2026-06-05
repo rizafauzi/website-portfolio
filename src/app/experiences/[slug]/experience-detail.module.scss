@@ -1,0 +1,39 @@
+
+.content {
+  padding-bottom: 40px;
+}
+
+.detailSummary {
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.heading {
+  margin: 16px 0 20px;
+
+  em {
+    background: linear-gradient(120deg, #ffb37c 0%, #ff5c7c 50%, #c846ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+  }
+}
+
+.description {
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+.section {
+  margin-bottom: 80px;
+  scroll-margin-top: 100px;
+}
+
+

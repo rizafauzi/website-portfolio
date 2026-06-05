@@ -1,0 +1,55 @@
+.prevnext {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pnCard {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(244, 241, 232, 0.1);
+  border-radius: 18px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(244, 241, 232, 0.22);
+    transform: translateY(-4px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 92, 124, 0.15), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.arrow {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lbl {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.name {
+  display: block;
+  margin-bottom: 4px;
+}

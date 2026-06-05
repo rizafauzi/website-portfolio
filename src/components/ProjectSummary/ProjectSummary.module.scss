@@ -1,0 +1,121 @@
+.side {
+  position: sticky;
+  top: 120px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(244, 241, 232, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(40px);
+  height: fit-content;
+
+  @media (max-width: 980px) {
+    position: relative;
+    top: auto;
+  }
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(255, 100, 100, 0.3), rgba(200, 70, 255, 0.3));
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sideTitle {
+  margin-bottom: 8px;
+}
+
+.role {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.metaLabel {
+  margin-bottom: 0;
+}
+
+.tocLabel {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tocLink {
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  padding-left: 0;
+  border-left: 2px solid transparent;
+  padding: 4px 0 4px 12px;
+
+  &:hover {
+    border-left-color: rgba(255, 92, 124, 0.5);
+    padding-left: 16px;
+  }
+}
+
+.stackLabel {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(244, 241, 232, 0.1);
+  margin: 20px 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(244, 241, 232, 0.1);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  a {
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(244, 241, 232, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.09);
+    }
+  }
+}

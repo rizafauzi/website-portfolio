@@ -319,10 +319,22 @@
   dependencies:
     chalk "^4.1.0"
 
+"@contentful/rich-text-react-renderer@^16.2.1":
+  version "16.2.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-16.2.1.tgz#9dd3f9e7b08c6080b10bf5d1f83ed0ee0cfdd8ca"
+  integrity sha512-CZTqlaa/Je3T6JfFaHDAaDWuJrDAYBlBEptedlyBml+hojpMFRRz3Vmv5iU7AI7d80BJ1MlXdA7srLXK7ik/HA==
+  dependencies:
+    "@contentful/rich-text-types" "^17.2.7"
+
 "@contentful/rich-text-types@^16.0.2":
   version "16.3.0"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.3.0.tgz#d44145a43b32d61eb4d6a82d3001cdfddbbda42e"
   integrity sha512-OfQmAu5bxE0CgQA3WlUleVej+ifFG/iXmB2DmUl4EyWyFue1aiIvfjxQhcDRSH4n1jUNMJ6L1wInZL8uV5m3TQ==
+
+"@contentful/rich-text-types@^17.2.7":
+  version "17.2.7"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.2.7.tgz#fdb485298c0fb18504277ac75ea8738f0bc6e208"
+  integrity sha512-aIdozk8vk5gsYcallOrwEiL6+GSlMXZorDOmiVELfpbVaXMJPJPlf2CBw3LUzviAqCw0UPQcKHHCwG7SdY7u5w==
 
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"

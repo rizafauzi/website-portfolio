@@ -81,6 +81,7 @@ export type Project = {
   techStacks: RelationshipKey[];
   techUsed: Skill[];
   company: Company | undefined;
+  details: object
 };
 
 export type Skill = {

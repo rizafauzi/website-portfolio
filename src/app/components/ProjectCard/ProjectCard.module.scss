@@ -7,6 +7,7 @@
 }
 
 .container {
+  width: 100%;
   position: relative;
   border: solid 1px hsla(0, 0%, 58.8%, 0.5);
   border-radius: 10px;
@@ -23,6 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
     background: rgba(0, 0, 0, 0.427);
     backdrop-filter: blur(50px);
   }

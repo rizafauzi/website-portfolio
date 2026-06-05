@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    serverActions: true,
+    serverActions: {
+      allowedOrigins: ["localhost:3000"],
+    },
   },
   output: "standalone",
   webpack(config) {
@@ -12,7 +14,6 @@ const nextConfig = {
 
     return config;
   },
-  optimizeFonts: true,
   images: {
     minimumCacheTTL: 31536000,
     remotePatterns: [

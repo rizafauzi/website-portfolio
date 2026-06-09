@@ -1,0 +1,51 @@
+.button {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(244, 241, 232, 0.1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      400px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 255, 255, 0.12),
+      transparent 80%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(244, 241, 232, 0.22);
+    transform: translateY(-2px);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.primary {
+  border-radius: 999px;
+}
+
+.secondary {
+  border-radius: 12px;
+}

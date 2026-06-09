@@ -1,10 +1,9 @@
-
 .content {
   padding-bottom: 40px;
 }
 
 .detailSummary {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 .eyebrow {
@@ -15,15 +14,14 @@
 }
 
 .heading {
-  margin: 16px 0 20px;
+  background: linear-gradient(120deg, #ffb37c 0%, #ff5c7c 50%, #c846ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  em {
-    background: linear-gradient(120deg, #ffb37c 0%, #ff5c7c 50%, #c846ff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: italic;
-  }
+.role {
+  @extend .heading;
 }
 
 .description {
@@ -35,5 +33,3 @@
   margin-bottom: 80px;
   scroll-margin-top: 100px;
 }
-
-

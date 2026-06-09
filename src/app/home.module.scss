@@ -85,20 +85,31 @@
 }
 
 .entryCard {
+  gap: 10%;
   z-index: 100;
-  padding: 16px;
-  width: 70%;
-  margin: 0% 15%;
+  display: grid;
+  padding: 28px;
   margin-top: 5vh;
-  min-height: 50vh;
-  position: relative;
-  border-radius: 16px;
-  background: #ffffff33;
-  backdrop-filter: blur(15px);
-  border: solid 1px hsla(0, 0%, 58.8%, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 45vh;
+  grid-template-columns: 40% 50%;
+  .content {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .description {
+    gap: 12px;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .buttons {
+    gap: 12px;
+    display: flex;
+    margin-top: 24px;
+    flex-direction: row;
+  }
 }
 
 .cta {

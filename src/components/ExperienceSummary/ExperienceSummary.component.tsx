@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Image, Text } from "@/components";
 
 import styles from "./ExperienceSummary.module.scss";
@@ -40,41 +41,63 @@ const ExperienceSummary = ({
         {companyName}
       </Text>
       {role && (
-        <Text tag="span" size="small" color="grey-500" className={styles.role}>
+        <Text tag="span" size="medium" color="white" className={styles.role}>
           {role}
         </Text>
       )}
 
       <div className={styles.metadata}>
-        <Text tag="label" size="xsmall" color="grey-500" weight="semibold" className={styles.metaLabel}>
+        <Text
+          tag="label"
+          size="small"
+          color="grey-500"
+          weight="semibold"
+          className={styles.metaLabel}
+        >
           Period
         </Text>
-        <Text tag="span" size="xsmall" color="grey-400">
+        <Text tag="span" size="small" color="grey-400">
           {startYear} — {endYear}
         </Text>
-        <Text tag="label" size="xsmall" color="grey-500" weight="semibold" className={styles.metaLabel}>
+        <Text
+          tag="label"
+          size="small"
+          color="grey-500"
+          weight="semibold"
+          className={styles.metaLabel}
+        >
           Role
         </Text>
-        <Text tag="span" size="xsmall" color="grey-400">
+        <Text tag="span" size="small" color="grey-400">
           {role}
         </Text>
-        <Text tag="label" size="xsmall" color="grey-500" weight="semibold" className={styles.metaLabel}>
+        <Text
+          tag="label"
+          size="small"
+          color="grey-500"
+          weight="semibold"
+          className={styles.metaLabel}
+        >
           Status
         </Text>
-        <Text tag="span" size="xsmall" color="grey-400">
-          Completed
+        <Text tag="span" size="small" color="grey-400">
+          Ongoing
         </Text>
       </div>
 
-      <div className={styles.divider} />
+      {!!website && (
+        <Fragment>
+          <div className={styles.divider} />
 
-      <div className={styles.links}>
-        <a href={website || "#"} target="_blank" rel="noopener noreferrer">
-          <Text tag="span" size="small" color="white" weight="semibold">
-            ↗ Website
-          </Text>
-        </a>
-      </div>
+          <div className={styles.links}>
+            <a href={website || "#"} target="_blank" rel="noopener noreferrer">
+              <Text tag="span" size="small" color="white" weight="semibold">
+                Website
+              </Text>
+            </a>
+          </div>
+        </Fragment>
+      )}
     </aside>
   );
 };

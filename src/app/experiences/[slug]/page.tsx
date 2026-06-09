@@ -71,10 +71,10 @@ const ExperienceDetail = async (props: ExperienceDetailProps) => {
               </Text>
 
               <Text tag="h1" size="d-xlarge" color="white" className={styles.heading}>
-                <em>{companyName}</em>
+                {companyName}
               </Text>
 
-              <Text tag="p" size="large" color="grey-500" className={styles.role}>
+              <Text tag="p" size="xlarge" weight="semibold" color="grey-500" className={styles.role}>
                 {role}
               </Text>
 

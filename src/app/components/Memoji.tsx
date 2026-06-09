@@ -18,8 +18,8 @@ const Memoji = () => {
   return (
     <video
       loop
-      width="400"
-      height="360"
+      width="700"
+      height="500"
       muted={true}
       ref={videoRef}
       autoPlay={true}

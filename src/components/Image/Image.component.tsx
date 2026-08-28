@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 import Link from "next/link";
+import NextImage, { ImageProps as NextImageProps } from "next/image";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-interface IImage {
+type ImageProps = NextImageProps & {
   src: any;
   alt: string;
   style?: any;
@@ -14,68 +15,34 @@ interface IImage {
   priority?: boolean;
   className?: string;
   isImg?: boolean;
-  height?: number | string;
-  width?: number | string;
-}
+  height?: number;
+  width?: number;
+};
 
-const Image: React.FC<IImage> = ({
-  alt,
-  src,
-  isImg = false,
-  className,
-  width = 50,
-  height = 50,
-  style = {},
-  href,
-}) => {
+const Image: React.FC<ImageProps> = props => {
+  const { alt, src, isImg = false, className, style = {}, href } = props;
+
   if (!isImg) {
     if (href) {
       return (
         <Link href={href}>
-          <LazyLoadImage
-            alt={alt}
-            src={src}
-            effect="blur"
-            style={style}
-            width={width}
-            height={height}
-            className={className}
-          />
+          <NextImage style={style} className={className} {...props} />
         </Link>
       );
     }
 
-    return (
-      <LazyLoadImage
-        alt={alt}
-        src={src}
-        style={style}
-        width={width}
-        effect="blur"
-        height={height}
-        wrapperClassName={className}
-      />
-    );
+    return <NextImage style={style} className={className} {...props} />;
   }
 
   if (href) {
     return (
       <Link href={href}>
-        <img
-          alt={alt}
-          src={src}
-          style={style}
-          width={width}
-          height={height}
-          className={className}
-        />
+        <img style={style} className={className} {...props} />
       </Link>
     );
   }
 
-  return (
-    <img alt={alt} className={className} src={src} width={width} height={height} style={style} />
-  );
+  return <img alt={alt} className={className} src={src} style={style} />;
 };
 
 export default Image;

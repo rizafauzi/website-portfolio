@@ -18,7 +18,7 @@ const SkillCard = ({ data }: { data: ISkillCard }) => {
         <div className={styles.projects}>
           <Text color="white">Projects made with {label}</Text>
         </div>
-        <Image alt={slug} src={`/assets/logo/${img}`} />
+        <Image alt={slug} src={img} width={30} height={30} />
         <Text color="white" size="small" weight="semibold">
           {label}
         </Text>

@@ -10,13 +10,19 @@ const ProfileCard = () => {
         <div className={styles.profileCard}>
           <Image
             className={styles.profileImage}
-            width={350}
-            height={100}
+            width={300}
+            height={80}
             alt="profile"
             src="/assets/images/profile.jpg"
           />
           <div className={styles.profileContent}>
-            <Image alt="memoji" width={200} height={200} src="/assets/images/memoji_mac.png" />
+            <Image
+              alt="memoji"
+              width={200}
+              height={200}
+              className={styles.emoji}
+              src="/assets/images/memoji_mac.png"
+            />
             <Text color="white" weight="bold" size="d-xsmall">
               First of all, Glad to meet you!
             </Text>

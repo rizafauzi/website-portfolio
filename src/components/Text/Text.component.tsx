@@ -1,4 +1,3 @@
-import React from "react";
 import { Bebas_Neue, Open_Sans } from "next/font/google";
 
 import { textColor, textSize, textWeight } from "./Text.style";

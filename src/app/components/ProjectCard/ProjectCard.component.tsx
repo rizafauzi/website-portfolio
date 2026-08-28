@@ -24,20 +24,28 @@ const ProjectCard = ({ data, minHeight = "40vh" }: ProjectCardProps) => {
           <Image
             alt="copy"
             width={350}
+            height={200}
             className={styles.image1}
             src={`/assets/projects/bibit_desktop_1.png`}
           />
           <Image
             alt="copy"
-            width="100%"
+            // width="100%"
             height={200}
+            width={200}
             className={styles.image2}
             src={`/assets/projects/bibit_mobile_1.png`}
           />
         </div>
         <div className={styles.content}>
           <div className="flex flex-row gap-2 items-center mb-1">
-            <Image alt="copy" width={30} height={30} src={company?.image} className={styles.logo} />
+            <Image
+              alt="copy"
+              width={30}
+              height={30}
+              src={company?.image || ""}
+              className={styles.logo}
+            />
             <Text weight="bold" size="large" color="white">
               {title}
             </Text>

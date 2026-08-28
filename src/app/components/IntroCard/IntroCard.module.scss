@@ -1,0 +1,73 @@
+.entryCard {
+  gap: 10%;
+  z-index: 100;
+  display: grid;
+  padding: 28px;
+  height: 450px;
+  margin-top: 5vh;
+  grid-template-columns: 50% 40%;
+
+  .content {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .memoji {
+    scale: 1.2;
+    height: 390px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons {
+    gap: 12px;
+    display: flex;
+    margin-top: 24px;
+    flex-direction: row;
+  }
+
+  @media only screen and (min-width: 880px) {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  @media only screen and (max-width: 880px) {
+    width: 90%;
+    height: 55vh;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 0px;
+    justify-content: end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .description {
+      gap: 12px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .memoji {
+      position: absolute;
+      right: -30px;
+      top: -20px;
+      width: 50vw;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

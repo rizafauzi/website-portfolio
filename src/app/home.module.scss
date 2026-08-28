@@ -42,16 +42,14 @@
   .skillGrid {
     gap: 10px;
     display: grid;
+    // background: pink;
     margin: 12px 0px;
     justify-content: space-between;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .experience {
-    display: grid;
-    padding-bottom: 160px;
-    grid-template-columns: 50% 5px 50%;
-
+    @include cta;
     .grid1 {
       width: 100%;
       display: flex;
@@ -81,34 +79,6 @@
       background-color: none !important;
       border-left: 4px dotted rgba(255, 255, 255, 0.444) !important;
     }
-  }
-}
-
-.entryCard {
-  gap: 10%;
-  z-index: 100;
-  display: grid;
-  padding: 28px;
-  margin-top: 5vh;
-  min-height: 45vh;
-  grid-template-columns: 40% 50%;
-  .content {
-    gap: 8px;
-    display: flex;
-    flex-direction: column;
-  }
-  .description {
-    gap: 12px;
-    height: 45vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .buttons {
-    gap: 12px;
-    display: flex;
-    margin-top: 24px;
-    flex-direction: row;
   }
 }
 
